@@ -5,7 +5,7 @@ import {AiOutlineFacebook} from "react-icons/ai"
 import {TiSocialLinkedin} from "react-icons/ti"
 import {AiOutlineInstagram} from "react-icons/ai"
 import {AiOutlineHome} from "react-icons/ai"
-function page() {
+function Page() {
 
   return (
     <div className="w-full m-0 min-h-screen flex flex-col bg-white relative ">
@@ -52,9 +52,9 @@ function page() {
                 This is the first section of the home page.
               </p>
               <p className="text-sm font-bold font-serif text-indigo-600">
-                How do you convince visitors your website is worth their time?
+                How do you convince visitors your website is worth their time 
                 There are so many elements that a top-notch landing page design
-                needs, and making those elements the "best" they can be often
+                needs  and making those elements the best they can be often
                 depends on what your landing page goals are.
               </p>
             </section>
@@ -106,4 +106,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

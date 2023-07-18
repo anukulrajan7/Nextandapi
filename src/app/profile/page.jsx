@@ -5,19 +5,17 @@ import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-function Profile({ params }: any) {
-  const [data, setData] = useState({
-    email:String ,
-    username:String ,
-    _id:String,
-  });
+function Profile() {
+  const [data, setData] = useState({ });
+  const [dataState, setDataState] = useState(false)
   const router = useRouter();
   const userDetails = async () => {
     const user = await axios.get("/api/users/me");
-    const userdata: object = await user.data.data;
+    const userdata = await user.data.data;
     console.log(userdata);
 
     setData(userdata);
+    setDataState(true)
   };
   const logout = async () => {
     try {
@@ -25,7 +23,7 @@ function Profile({ params }: any) {
       toast.success("log out successfully");
       router.push("/login");
       // console.log(response)
-    } catch (err: any) {
+    } catch (err) {
       console.log(err.message);
       toast.error("could not log out");
     }
@@ -49,7 +47,7 @@ function Profile({ params }: any) {
         </div>
         
         <>
-             {!data?"": <>
+             {dataState?"": <>
              <p className="bg-white text-purple-600 first-letter:capitalize w-full px-3 py-2 flex gap-4 font-serif text-sm font-semibold"> <span className="hidden lg:block">Email{" "} :</span>{data.email}</p>
         <p className="bg-white text-purple-600 first-letter:capitalize w-full px-3 py-2 flex gap-4 font-serif text-sm font-semibold"> <span      className="hidden lg:block">user name{" "} :</span>{data?.username}</p>
         <p className="bg-white text-purple-600 first-letter:capitalize w-full px-3 py-2 flex gap-4 font-serif text-sm font-semibold"> <span      className="hidden lg:block">user id{" "} :</span> {data?._id}</p>

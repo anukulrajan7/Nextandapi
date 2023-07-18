@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-function page() {
+function Page() {
   return (
     <div className="w-full h-[100vh] flex justify-center px-4 items-center">
       <div className="w-full flex flex-col lg:w-[30%] justify-center items-center gap-6 py-8 px-4 shadow-md shadow-gray-500">
@@ -15,4 +15,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 
-function page() {
+function Page() {
   const [email, setEmail] = useState("");
   const router = useRouter();
   const [password, setPassword] = useState("");
@@ -83,4 +83,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

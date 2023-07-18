@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
- export const  page=()=> {
+ const  Page=()=> {
   const [email, setEmail] = useState("");
   const router = useRouter()
   const handleClick = (e: any) => {
@@ -49,4 +49,4 @@ import { toast } from "react-hot-toast";
   );
 }
 
-export default page;
+export default Page;
