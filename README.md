@@ -65,7 +65,7 @@ Ensure that you provide valid and secure values for these environment variables.
 
 To get started with the project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/project.git`.
+1. Clone the repository: `git clone https://github.com/anukulrajan7/Nextandapi`.
 2. Install the dependencies: `npm install` or `yarn install`.
 3. Set the environment variables as mentioned above.
 4. Start the development server: `npm run dev` or `yarn dev`.
