@@ -1,114 +1,111 @@
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import Image from "next/image";
+import {AiOutlineFacebook} from "react-icons/ai"
+import {TiSocialLinkedin} from "react-icons/ti"
+import {AiOutlineInstagram} from "react-icons/ai"
+import {AiOutlineHome} from "react-icons/ai"
+function page() {
+  const [mouseEnter, setMouseEnter] = useState(false);
 
-import Image from 'next/image'
-
-export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="w-full m-0 min-h-screen flex flex-col bg-white relative ">
+      <header className="w-full px-4 py-4 bg-purple-700  shadow-md shadow-gray-300 flex justify-evenly items-center">
+        <div className="flex w-full lg:w-[80%] justify-between items-center mx-auto">
+          <div className="logo bg-white w-fit px-3 py-2 rounded-sm shadw-md flex gap-2 font-semibold shadow-gray-200">
+            <span className="text-purple-700 font-serif text-xl hidden md:block">
+              Anukul <span className="text-slate-700">cv</span>
+            </span>
+          </div>
+          <nav className="flex justify-center gap-5 capitalize text-white  lg:text-[22px]   items-center">
+            <Link href={"/"}><AiOutlineHome/></Link>
+
+            <Link
+              href={"/login"}
+              className="bg-slate-900 text-white w-fit px-4 py-2 shadow-md text-sm rounded-md"
+            >
+              signin
+            </Link>
+            <div className="profile flex justify-center items-center">
+              <Link
+                href={"/profile"}
+                className="bg-gray-300 rounded-full w-[40px] h-[40px] flex justify-center items-center border-[2px] border-black "
+              >
+                {" "}
+                <Image
+                  alt="profile image"
+                  src={"/userimage.png"}
+                  width={50}
+                  height={50}
+                ></Image>{" "}
+              </Link>
+            </div>
+          </nav>
         </div>
-      </div>
+      </header>
+      <main>
+        <div className="container mx-auto px-4 bg-gray-200">
+          <div className="flex flex-col lg:flex-row lg:w-[80%] mx-auto w-full px-4 gap-6 items-center justify-center min-h-screen">
+            <section className="px-4 py-2 lg:w-[50%] w-full mb-8 h-full flex flex-col text-start justify-center items-center gap-6 ">
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+              <h1 className="lg:text-8xl text-4xl leading-snug bg-clip-text bg-gradient-to-t bg-blue-600 font-bold mb-4 font-serif text-purple-700 text-transparent">Welcome to My Website</h1>
+              <p className="text-3xl font-serif font-semibold text-purple-700">
+                This is the first section of the home page.
+              </p>
+              <p className="text-sm font-bold font-serif text-indigo-600">
+                How do you convince visitors your website is worth their time?
+                There are so many elements that a top-notch landing page design
+                needs, and making those elements the "best" they can be often
+                depends on what your landing page goals are.
+              </p>
+            </section>
+            <section className=" lg:w-[50%] w-full  flex justify-center items-center mx-auto h-full">
+              <div className="relative w-full  shadow-md rounded-md p-1 shadow-white ">
+                <Image
+                  src="/image1.jpg"
+                  alt="Image"
+                  width={1000}
+                  height={1000}
+                  className="object-cover"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+        <div className="container mx-auto px-4 bg-gray-700">
+          <div className="flex md:flex-row-reverse py-8 px-4  gap-5 flex-col-reverse w-full lg:w-[80%] mx-auto items-center justify-center min-h-screen">
+            <section className="flex flex-col gap-5 mx-4 justify-center items-center w-[50%]">
+              <h1 className="text-5xl leading-normal font-bold text-indigo-100 font-serif ">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              </h1>
+              <p className="font-serif font-bold text-purple-300 text-3xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi, adipisci..
+              </p>
+            </section>
+            <section className="w-[50%] flex flex-col justify-center items-center">
+              <div className="relative w-full p-2 bg-white shadow-md shadow-gray-300">
+                <Image
+                  src="/image2.png"
+                  alt="Image"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer className="bg-white shadow-md w-full py-5 px-4 justify-center flex flex-col gap-4 items-center mx-auto ">
+        <div className="bg-purple-700 h-[2px] w-[80%] mx-auto "></div>
+        <div className="flex gap-6 md:w-[80%] justify-between md:flex-row items-center  w-full flex-col">
+          <p>@copyright 2003 reserved to anukul</p>
+          <div className="flex gap-4 bg-purple-400 text-white py-2 text-3xl px-3"><AiOutlineFacebook/> <AiOutlineInstagram></AiOutlineInstagram> <TiSocialLinkedin></TiSocialLinkedin></div>
+        </div>
+      </footer>
+    </div>
+  );
 }
+
+export default page;
