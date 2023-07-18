@@ -1,13 +1,13 @@
-"use client";
+
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import {AiOutlineFacebook} from "react-icons/ai"
 import {TiSocialLinkedin} from "react-icons/ti"
 import {AiOutlineInstagram} from "react-icons/ai"
 import {AiOutlineHome} from "react-icons/ai"
 function page() {
-  const [mouseEnter, setMouseEnter] = useState(false);
+  
 
   return (
     <div className="w-full m-0 min-h-screen flex flex-col bg-white relative ">
