@@ -1,34 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
+
+This project is a web application built using Next.js, MongoDB, Nodemailer, Next.js middleware, React Tailwind CSS, and React Hot Toast. It provides functionality for user authentication and various user-related operations.
+
+## Folder Structure
+
+The project's folder structure is as follows:
+
+```
+- api
+  - users
+    - me
+      - route.ts
+    - signup
+      - route.ts
+    - resetpassword
+      - route.ts
+    - verifyemail
+      - route.ts
+    - login
+      - route.ts
+- pages
+  - login
+    - index.js
+  - signup
+    - index.js
+  - resetpassword
+    - index.js
+  - verifyemail
+    - index.js
+- ...
+```
+
+The project consists of two main folders: `api` and `pages`.
+
+The `api` folder contains various API endpoints related to user operations. Inside the `api/users` folder, you can find separate folders for different user routes, such as `me`, `signup`, `resetpassword`, `verifyemail`, and `login`. Inside each route folder, you can find a `route.ts` file that contains the logic for the corresponding API endpoint.
+
+The `pages` folder contains the different pages of the application. Each page has its own folder, such as `login`, `signup`, `resetpassword`, and `verifyemail`. Inside each folder, you can find an `index.js` file, which represents the main file for that page.
+
+You can add additional folders and files as per your project requirements.
+
+## Dependencies
+
+The project relies on the following dependencies:
+
+- Next.js
+- MongoDB
+- Nodemailer
+- React Tailwind CSS
+- React Hot Toast
+
+Make sure to have these dependencies installed in your project environment.
+
+## Environment Variables
+
+To run this project locally or in a deployment environment, you need to set the following environment variables:
+
+1. `MONGO_URI`: The connection string for your MongoDB database.
+2. `Token_Secret`: A secret key used for token generation and verification.
+3. `Domain`: The domain name or URL of your application.
+
+Ensure that you provide valid and secure values for these environment variables.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository: `git clone https://github.com/your-username/project.git`.
+2. Install the dependencies: `npm install` or `yarn install`.
+3. Set the environment variables as mentioned above.
+4. Start the development server: `npm run dev` or `yarn dev`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the development server, and you can access the application in your browser at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Additional Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Feel free to explore the project's code and make any necessary changes to suit your requirements. You can add more routes, pages, or components based on your application needs.
 
-## Learn More
+Remember to keep your environment variables secure and follow best practices for deployment and production environments.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions to this project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the project's GitHub repository.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Please review the license file for more details.
