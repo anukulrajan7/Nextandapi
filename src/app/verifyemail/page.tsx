@@ -3,6 +3,7 @@
 import axios from "axios";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 
 
 export default function VerifyEmailPage() {
@@ -15,9 +16,11 @@ export default function VerifyEmailPage() {
         try {
             await axios.post('/api/users/verifyemail', {token})
             setVerified(true);
+            toast.success("verify email successfully")
         } catch (error:any) {
             setError(true);
-            console.log(error.reponse.data);
+            // console.log(error.reponse.data);
+            toast.error(error.response.data.error);
             
         }
 
@@ -25,7 +28,7 @@ export default function VerifyEmailPage() {
 
     useEffect(() => {
         const urlToken = window.location.search.split("=")[1];
-        setToken(urlToken || "");
+        setToken(urlToken.replace("%","$") || "");
     },[]);
 
 
@@ -51,7 +54,7 @@ export default function VerifyEmailPage() {
             )}
             {error && (
                 <div>
-                    <h2 className="text-2xl bg-red-500 text-black">Error</h2>
+                    <h2 className="text-2xl ">Error</h2>
                     
                 </div>
             )}
